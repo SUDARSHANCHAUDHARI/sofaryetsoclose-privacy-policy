@@ -1,201 +1,230 @@
-# SoFarYetSoClose — Privacy Policy
+# SoFarYetSoClose Privacy Policy
 
-**Effective Date:** 2026-03-21
-**Last Updated:** 2026-03-21
-**Version:** 1.0.0
+This repository contains the public privacy policy for SoFarYetSoClose.
 
-Published by **Sudarshan Tech Labs** | https://sudarshantechlabs.com | sudarshantechlabs@gmail.com
+- Privacy policy: [PRIVACY_POLICY.md](PRIVACY_POLICY.md)
+- Web version: https://sudarshanchaudhari.github.io/sofaryetsoclose-privacy-policy/
+- Contact: sunny.sudarshan@gmail.com
 
----
+# SoFarYetSoClose Privacy Policy
 
-SoFarYetSoClose is a long-distance connection app for Android. It helps people stay connected over distance through shared content and real-time communication features. The App uses Firebase Authentication for secure accounts and Firebase Firestore and Storage for data sync.
+**Effective Date:** May 17, 2026
+_Last updated: May 17, 2026_
+**Version:** 1.1.0
 
----
+SoFarYetSoClose ("we," "our," or "us") is an Android app. SoFarYetSoClose is a partner nudge app for Android that uses Firebase to support accounts, pairing, media, and push notifications. This Privacy Policy explains what information the app collects, how it is used, and the choices you have. By installing or using SoFarYetSoClose you agree to the practices described below.
 
-## Data Collection
+## Information We Collect
+
+### Location Data
+- SoFarYetSoClose does not collect location data.
 
 ### Account Information
+- If you create or sign in to an account, we collect Firebase user ID, email or authentication provider details, display/profile details you provide, partner ID, invite code, FCM token, and pairing status.
+- Nudge content, media attachments, audio or recording features where enabled, offline queue data, and app preferences may be associated with your account.
 
-| Data | Purpose | Storage |
-|---|---|---|
-| Email address | Account identification | Firebase Authentication |
-| Display name | Profile display | Firebase Authentication, Firestore |
-| Google account info (if Google Sign-In used) | Authentication only | Firebase Authentication |
-| Authentication session tokens | Maintain secure sign-in | Firebase Authentication |
-| FCM push token | Deliver notifications | Firebase Cloud Messaging |
+### Device Information
+- Device push token, notification preferences, offline queue state, and local app preferences may be stored locally or in Firebase.
 
-### App Content
+## How We Use Your Information
 
-| Data | Purpose | Storage |
-|---|---|---|
-| User-generated content (messages, posts, shared items) | Core app functionality | Firebase Firestore |
-| Audio recordings | In-app audio features | Firebase Storage |
-| Media files (images, videos shared in-app) | Content sharing | Firebase Storage |
-| App preferences | Personalisation | DataStore and EncryptedSharedPreferences on your device |
+### Location Sharing
+- SoFarYetSoClose does not use your location.
 
-### Analytics and Crash Data
+### Account Management
+- Create and manage accounts and partner pairings.
+- Send nudges, media, audio-enabled interactions, and push notifications between paired partners.
+- Sync data and offline queue state across Firebase-backed services.
 
-| Data | Purpose | Storage |
-|---|---|---|
-| App usage events (screens visited, features used) | App improvement | Firebase Analytics |
-| Device model, OS version, app version | Analytics context | Firebase Analytics |
-| Crash stack traces (no personal content) | App stability | Firebase Crashlytics |
+### Service Improvement
+- Improve reliability, notification delivery, and sync behavior.
+- We do not sell your relationship content or account data.
 
----
+## Storage and Retention
 
-## How We Use Your Data
+### Data Storage
+- Account, pairing, nudge, media, and push token data may be stored in Firebase services such as Firebase Authentication, Firestore, Storage, Cloud Functions, and Cloud Messaging.
+- Offline queue and preferences may be stored locally using Room/DataStore.
 
-| Purpose | Data Used |
-|---|---|
-| Authenticate you securely | Firebase Authentication |
-| Store and sync your content | Firebase Firestore and Storage |
-| Deliver push notifications | Firebase Cloud Messaging |
-| Record and share audio | Firebase Storage |
-| Improve app quality | Firebase Analytics (aggregated) |
-| Fix crashes | Firebase Crashlytics |
+### Data Retention
+- Account and paired content are retained while your account is active unless you delete content or request deletion.
+- Local offline data remains until synced, deleted, app data is cleared, or the app is uninstalled.
 
----
-
-## Data Storage and Security
-
-- **Authentication:** Firebase Authentication with Google's secure infrastructure
-- **Content:** Firebase Firestore and Storage with encryption in transit (HTTPS/TLS) and at rest
-- **Firestore security rules:** Your content is accessible only to you and users you connect with
-- **Local preferences:** Stored in EncryptedSharedPreferences on your device
-- **Background messaging:** Foreground service runs for real-time message delivery
-
-## Data Retention
-
-| Data | Retention |
-|---|---|
-| Account and Firestore content | Until you delete your account |
-| Firebase Storage files | Until you delete them or your account |
-| Firebase Analytics | Aggregated, 14 months (Firebase default) |
-| Firebase Crashlytics | 90 days (Firebase default) |
-
----
+### Data Security
+- Data is protected using platform security controls available on Android, the browser, Firebase, Google, GitHub, or other services named in this policy.
+- Local data remains on your device or browser unless a feature you use requires a named third-party service.
+- Network communication uses HTTPS/TLS where applicable.
+- You should protect your device, browser profile, and Google/GitHub accounts with strong authentication.
 
 ## Data Sharing
 
-We do not sell your data. Content is shared only with users you connect with in-app. Data is processed by:
+### Family Groups
+- SoFarYetSoClose does not use MyFamilyTracker-style family groups unless explicitly described in this policy.
+- If this app includes pairing, sharing, or collaboration features, data is shared only with the people or services required for the feature you choose.
+- You control feature use through the app settings, permissions, account controls, or platform settings.
 
-- **Google Firebase (Authentication, Firestore, Storage, Messaging, Analytics, Crashlytics):** https://firebase.google.com/support/privacy
-- **Google (Google Sign-In):** https://policies.google.com/privacy
+### Third Parties
+- Firebase/Google provides authentication, database, storage, cloud functions, and messaging services.
+- Nudges and shared content are visible to your paired partner according to the app feature you use.
+- No relationship content is sold to advertisers or data brokers.
 
----
+We do **not** share your data with:
+- Data brokers
+- Unrelated advertising networks, unless advertising is explicitly listed above for this app
+- Third parties unrelated to the app features described in this policy
 
-## Account Deletion
+## Permissions Used
 
-You have the right to delete your account and all associated data at any time.
+### Required Permissions
 
-### Option 1 — In-App Deletion
-1. Open SoFarYetSoClose
-2. Go to **Settings**
-3. Tap **Account**
-4. Tap **Delete Account**
-5. Confirm the deletion
+* **INTERNET**: Required for Firebase sync, media, and messaging.
+* **RECORD_AUDIO**: Used only for audio-enabled nudge or recording features.
+* **POST_NOTIFICATIONS, VIBRATE, FOREGROUND_SERVICE, FOREGROUND_SERVICE_REMOTE_MESSAGING**: Used for push notifications and background messaging.
+* **SYSTEM_ALERT_WINDOW**: Used only for full-screen/overlay notification experiences when enabled.
 
-### Option 2 — Email Request
-Send an email to **sudarshantechlabs@gmail.com** with:
-- Subject: **SoFarYetSoClose Account Deletion Request**
-- Your registered email address
+### Optional Permissions
 
-We will process your request within 30 days.
-
-### What Gets Deleted
-- ✅ Firebase Authentication account
-- ✅ All Firestore content (messages, posts, shared items)
-- ✅ All Firebase Storage files (audio, media)
-- ✅ Push notification token
-
-### What May Remain
-- Aggregated, anonymised Firebase Analytics data
-- Firebase Crashlytics reports (no personal content)
-
----
-
-## Permissions Explained
-
-| Permission | Why It Is Needed |
-|---|---|
-| `INTERNET` | Required for all Firebase services |
-| `RECORD_AUDIO` | Record audio messages |
-| `POST_NOTIFICATIONS` | Deliver message and activity notifications |
-| `VIBRATE` | Haptic feedback for notifications |
-| `SYSTEM_ALERT_WINDOW` | Display overlay alerts when App is backgrounded |
-| `FOREGROUND_SERVICE` | Run real-time messaging service in background |
-| `FOREGROUND_SERVICE_REMOTE_MESSAGING` | Required service type for messaging foreground service |
-
----
+* Audio recording, overlay notification experiences, and notifications are controlled by you through app or Android settings.
 
 ## Your Rights and Controls
 
-- **Delete content:** Delete individual items within the App
-- **Delete account:** See Account Deletion section above
-- **Disconnect notifications:** Disable in Android Settings > Apps > SoFarYetSoClose > Notifications
+### Location Sharing Control
+- No location sharing exists in SoFarYetSoClose.
 
----
+### Account Management
+- You can sign out, manage partner pairing, delete content where supported, or request account deletion.
+- Your paired partner may retain content they have received unless deletion is supported and completed for both sides.
+
+### Data Access
+- You can view account, pairing, and nudge data in the app and request access or deletion by email.
+
+### GDPR Rights (EU Users)
+If you are in the European Union, you have additional rights:
+- **Right to Access**: Request a copy of your personal data
+- **Right to Rectification**: Correct inaccurate data
+- **Right to Erasure**: Request deletion of your data
+- **Right to Restrict Processing**: Limit how we use your data
+- **Right to Data Portability**: Receive your data in a portable format
+- **Right to Object**: Object to certain types of processing
+
+To exercise these rights, contact us using the methods in the Contact Us section.
+
+### Permissions
+- You can revoke Android permissions in Android Settings -> Apps -> SoFarYetSoClose -> Permissions.
+- Browser permissions and storage can be managed in your browser site settings for web apps.
+- Revoking required permissions may prevent related features from functioning.
 
 ## Children's Privacy
 
-SoFarYetSoClose is not directed at children under 13. We do not knowingly create accounts for children under 13. If we become aware that a child under 13 has registered, we will delete the account promptly.
+- Our app is **not intended for children under 13**.
+- We do not knowingly collect data from children under 13.
+- If you are a parent or guardian and believe your child has provided personal information, please contact us to request deletion.
+- Parents and guardians should supervise children's use of apps that store personal content.
 
----
+## Security
+
+- Local data is protected by Android, browser, or operating-system app sandboxing.
+- Network communication uses HTTPS/TLS where applicable.
+- Third-party services named in this policy provide their own security controls and privacy policies.
+- You are responsible for protecting your device, browser profile, and account credentials.
+- We do not sell your personal data.
 
 ## Changes to This Policy
 
-We may update this Privacy Policy from time to time. We will notify you of significant changes via:
+We may update this Privacy Policy to reflect new features, legal requirements, or changes in our practices. Significant changes will be:
+- Noted in the app release notes or repository when applicable
+- Reflected with a new "Last updated" date
+- Communicated in the app or project page if the change is significant
 
-- In-app notification
-- Updated policy date on this page
-
-Continued use of SoFarYetSoClose after changes become effective constitutes your acceptance of the updated policy.
-
----
+The "Last updated" date at the top of this policy indicates when revisions occurred. Continued use of the app after changes constitutes acceptance of the updated policy.
 
 ## Contact Us
 
-For privacy questions, data access requests, or account deletion:
+If you have questions about this Privacy Policy, wish to request data deletion, or have privacy concerns:
 
-- **Email:** sudarshantechlabs@gmail.com
-- **Developer:** sunny.sudarshan@gmail.com
-- **Website:** https://sudarshantechlabs.com
-- **Response Time:** Within 48 hours
+* **GitHub Repository:** https://github.com/SUDARSHANCHAUDHARI/sofaryetsoclose-privacy-policy
+* **Email:** sunny.sudarshan@gmail.com
+* **Main App Repository:** https://github.com/SUDARSHANCHAUDHARI/SoFarYetSoClose
+
+We will respond as quickly as possible, typically within 48 hours.
+
+## Data Deletion
+
+### How to Delete Your Account:
+You have **multiple options** to delete your account and associated data:
+
+#### Option 1: In-App Deletion
+1. Open SoFarYetSoClose app
+2. Go to account/profile/settings
+3. Select the delete account option if available
+4. Confirm deletion
+5. Your account and associated data will be deleted or queued for deletion
+
+#### Option 2: Email Deletion Request
+Send an email to: **support@sudarshantechlabs.com** or **sunny.sudarshan@gmail.com**
+- Subject: "Data Deletion Request - SoFarYetSoClose"
+- Include: The email/account identifier used in the app, if any
+- We will process deletion requests as quickly as possible, typically within 48 hours for acknowledgement
+
+#### Option 3: Web Deletion
+1. Visit the privacy policy website if a deletion form is available
+2. Enter your registered email address
+3. Submit and confirm the deletion request
+
+### What Gets Deleted:
+- Account/profile data
+- App content associated with your account
+- Pairing/group/sync data where applicable
+- Local cached data after sign-out, deletion, app-data clear, or uninstall
+
+### Data Retention After Deletion:
+- **Immediate:** account access may stop or deletion may be queued depending on the service
+- **Up to 30 days:** cloud data may be removed from active systems unless a shorter period is legally required
+- **Backups/logs:** limited backup or security logs may remain for a short period under provider policies
+
+To request deletion of your data:
+
+1. Open SoFarYetSoClose, if installed
+2. Delete local content or clear app/site data where applicable
+3. Contact support via email: sunny.sudarshan@gmail.com
+4. Request account/data deletion and include enough detail for us to identify the app and any account, if one exists
+5. We will confirm what data can be deleted and complete the request according to the retention terms above
+
+## Firebase and Google Services
+
+This app may use the following services depending on the features you enable and the installed version:
+
+- Firebase Authentication
+- Firebase Firestore
+- Firebase Storage
+- Firebase Cloud Messaging
+- Firebase Cloud Functions
+
+Please review relevant third-party privacy policies:
+
+- [Google Privacy Policy](https://policies.google.com/privacy)
+- [Firebase Privacy Policy](https://firebase.google.com/support/privacy)
+- [Google Play Terms](https://play.google.com/about/play-terms/)
+- [GitHub Privacy Statement](https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement)
+
+## About SoFarYetSoClose
+
+SoFarYetSoClose is built with privacy in mind. The app is built with:
+- Kotlin and Jetpack Compose
+- Firebase backend services
+- Room/DataStore for offline/local state
+- Push notifications and partner pairing features
+
+The app collects only the data needed for the features described in this policy, and local-first features keep data on your device whenever possible.
 
 ---
 
-## GDPR Rights (EU Users)
-
-If you are in the European Economic Area, you have the right to:
-
-- **Access** — Request a copy of your personal data
-- **Rectification** — Correct inaccurate data
-- **Erasure** — Request deletion of your data
-- **Restrict Processing** — Limit how we use your data
-- **Data Portability** — Receive your data in a portable format
-- **Object** — Object to certain types of processing
-
-To exercise these rights, contact us at the details above.
+**Last Updated:** May 17, 2026
 
 ---
 
-## Play Store Data Safety Summary
+## Recent Updates (Version 1.1.0 - May 17, 2026)
 
-| Data type | Collected | Shared | Purpose |
-|---|---|---|---|
-| Email address | Yes | No | Account authentication |
-| User content | Yes | Connected users only | App functionality |
-| Audio recordings | Yes | Connected users only | App functionality |
-| App interactions | Yes (Firebase Analytics) | No | Analytics |
-| Crash logs | Yes (Crashlytics) | No | App stability |
+- **Aligned policy with the shared privacy-policy structure.**
+- **Clarified Firebase account/pairing data, partner sharing, media/audio features, offline queue, and notifications.**
 
----
-
----
-
-**This privacy policy complies with:**
-- Google Play Store requirements
-- GDPR (General Data Protection Regulation)
-- CCPA (California Consumer Privacy Act)
-
-**Last reviewed:** 2026-03-21
