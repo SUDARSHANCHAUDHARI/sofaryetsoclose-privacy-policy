@@ -1,10 +1,10 @@
 # SoFarYetSoClose Privacy Policy
 
 **Effective Date:** May 17, 2026
-_Last updated: May 17, 2026_
-**Version:** 1.1.0
+_Last updated: October 19, 2026_
+**Version:** 1.2.0
 
-SoFarYetSoClose ("we," "our," or "us") is an Android app. SoFarYetSoClose is a partner nudge app for Android that uses Firebase to support accounts, pairing, media, and push notifications. This Privacy Policy explains what information the app collects, how it is used, and the choices you have. By installing or using SoFarYetSoClose you agree to the practices described below.
+SoFarYetSoClose ("we," "our," or "us") is an Android app. SoFarYetSoClose is a partner nudge app for Android that uses Firebase to support accounts, pairing, voice notes, and push notifications. This Privacy Policy explains what information the app collects, how it is used, and the choices you have. By installing or using SoFarYetSoClose you agree to the practices described below.
 
 ## Information We Collect
 
@@ -13,7 +13,7 @@ SoFarYetSoClose ("we," "our," or "us") is an Android app. SoFarYetSoClose is a p
 
 ### Account Information
 - If you create or sign in to an account, we collect Firebase user ID, email or authentication provider details, display/profile details you provide, partner ID, invite code, FCM token, and pairing status.
-- Nudge content, media attachments, audio or recording features where enabled, offline queue data, and app preferences may be associated with your account.
+- Nudge content (text nudges, emojis, and voice notes you record in the app), offline queue data, and app preferences may be associated with your account.
 
 ### Device Information
 - Device push token, notification preferences, offline queue state, and local app preferences may be stored locally or in Firebase.
@@ -25,7 +25,7 @@ SoFarYetSoClose ("we," "our," or "us") is an Android app. SoFarYetSoClose is a p
 
 ### Account Management
 - Create and manage accounts and partner pairings.
-- Send nudges, media, audio-enabled interactions, and push notifications between paired partners.
+- Send nudges, emojis, voice notes, and push notifications between paired partners.
 - Sync data and offline queue state across Firebase-backed services.
 
 ### Service Improvement
@@ -35,7 +35,7 @@ SoFarYetSoClose ("we," "our," or "us") is an Android app. SoFarYetSoClose is a p
 ## Storage and Retention
 
 ### Data Storage
-- Account, pairing, nudge, media, and push token data may be stored in Firebase services such as Firebase Authentication, Firestore, Storage, Cloud Functions, and Cloud Messaging.
+- Account, pairing, nudge, voice note audio, and push token data may be stored in Firebase services such as Firebase Authentication, Firestore, Storage, Cloud Functions, and Cloud Messaging.
 - Offline queue and preferences may be stored locally using Room/DataStore.
 
 ### Data Retention
@@ -58,6 +58,7 @@ SoFarYetSoClose ("we," "our," or "us") is an Android app. SoFarYetSoClose is a p
 ### Third Parties
 - Firebase/Google provides authentication, database, storage, cloud functions, and messaging services.
 - Nudges and shared content are visible to your paired partner according to the app feature you use.
+- If you tap Share on a nudge or Share the app, the app sends plain text only (the nudge text or an app store link) to the Android share sheet, and the app you pick receives that text. The app does not share images, videos, or audio files this way.
 - No relationship content is sold to advertisers or data brokers.
 
 We do **not** share your data with:
@@ -69,8 +70,8 @@ We do **not** share your data with:
 
 ### Required Permissions
 
-* **INTERNET**: Required for Firebase sync, media, and messaging.
-* **RECORD_AUDIO**: Used only for audio-enabled nudge or recording features.
+* **INTERNET**: Required for Firebase sync, voice notes, and messaging.
+* **RECORD_AUDIO**: Used only to record voice notes you choose to send.
 * **POST_NOTIFICATIONS, VIBRATE, FOREGROUND_SERVICE, FOREGROUND_SERVICE_REMOTE_MESSAGING**: Used for push notifications and background messaging.
 * **SYSTEM_ALERT_WINDOW**: Used only for full-screen/overlay notification experiences when enabled.
 
@@ -153,7 +154,7 @@ You have **multiple options** to delete your account and associated data:
 5. Your account and associated data will be deleted or queued for deletion
 
 #### Option 2: Email Deletion Request
-Send an email to: **support@sudarshantechlabs.com** or **sunny.sudarshan@gmail.com**
+Send an email to: **sunny.sudarshan@gmail.com**
 - Subject: "Data Deletion Request - SoFarYetSoClose"
 - Include: The email/account identifier used in the app, if any
 - We will process deletion requests as quickly as possible, typically within 48 hours for acknowledgement
@@ -211,9 +212,14 @@ The app collects only the data needed for the features described in this policy,
 
 ---
 
-**Last Updated:** May 17, 2026
+**Last Updated:** October 19, 2026
 
 ---
+
+## Recent Updates (Version 1.2.0 - October 19, 2026)
+
+- **Replaced general "media" wording with voice notes, the only media the app records or uploads, and described the plain-text Share option.**
+- **Listed a single contact email.**
 
 ## Recent Updates (Version 1.1.0 - May 17, 2026)
 
