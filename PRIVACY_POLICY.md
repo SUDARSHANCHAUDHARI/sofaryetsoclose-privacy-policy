@@ -1,8 +1,8 @@
 # SoFarYetSoClose Privacy Policy
 
 **Effective Date:** May 17, 2026
-_Last updated: October 19, 2026_
-**Version:** 1.2.0
+_Last updated: November 2, 2026_
+**Version:** 1.3.0
 
 SoFarYetSoClose ("we," "our," or "us") is an Android app. SoFarYetSoClose is a partner nudge app for Android that uses Firebase to support accounts, pairing, voice notes, and push notifications. This Privacy Policy explains what information the app collects, how it is used, and the choices you have. By installing or using SoFarYetSoClose you agree to the practices described below.
 
@@ -57,6 +57,9 @@ SoFarYetSoClose ("we," "our," or "us") is an Android app. SoFarYetSoClose is a p
 
 ### Third Parties
 - Firebase/Google provides authentication, database, storage, cloud functions, and messaging services.
+- **Firebase Crashlytics (Google)**: If the app crashes, a crash report is sent to Firebase Crashlytics. It can include the error details, device model, Android version, app version, and an installation identifier. No nudge text or relationship content is included. We use it only to find and fix bugs.
+- **Firebase Analytics (Google)**: Aggregated usage events (which screens are opened and which features are used) together with device model, Android version, and app version. No nudge or message content is sent. We use it only to see which features are worth keeping.
+- Google's handling of both is covered by the [Firebase Privacy Policy](https://firebase.google.com/support/privacy).
 - Nudges and shared content are visible to your paired partner according to the app feature you use.
 - If you tap Share on a nudge or Share the app, the app sends plain text only (the nudge text or an app store link) to the Android share sheet, and the app you pick receives that text. The app does not share images, videos, or audio files this way.
 - No relationship content is sold to advertisers or data brokers.
