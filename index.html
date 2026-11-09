@@ -18,16 +18,19 @@
     hr { border: 0; border-top: 1px solid var(--border); margin: 2rem 0; }
     strong { font-weight: 700; }
     @media (max-width: 640px) { article { padding: 20px; } main { padding: 20px 12px 48px; } }
+      table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.95rem; }
+    th, td { border: 1px solid var(--border); padding: 8px 10px; text-align: left; vertical-align: top; }
+    th { background: var(--bg); font-weight: 700; }
+    code { background: var(--bg); border: 1px solid var(--border); border-radius: 4px; padding: 1px 5px; font-size: 0.9em; }
+    @media (max-width: 640px) { table, th, td { font-size: 0.85rem; } th, td { padding: 6px 7px; } }
   </style>
 </head>
 <body>
   <main>
     <article>
       <h1>SoFarYetSoClose Privacy Policy</h1>
-      <p><strong>Effective Date:</strong> May 17, 2026</p>
-      <p><em>Last updated: November 2, 2026</em></p>
-      <p><strong>Version:</strong> 1.3.0</p>
-      <p>SoFarYetSoClose (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) is an Android app. SoFarYetSoClose is a partner nudge app for Android that uses Firebase to support accounts, pairing, voice notes, and push notifications. This Privacy Policy explains what information the app collects, how it is used, and the choices you have. By installing or using SoFarYetSoClose you agree to the practices described below.</p>
+      <p><strong>Effective Date:</strong> May 17, 2026 _Last updated: November 9, 2026_ <strong>Version:</strong> 1.4.0</p>
+      <p>SoFarYetSoClose ("we," "our," or "us") is an Android app. SoFarYetSoClose is a partner nudge app for Android that uses Firebase to support accounts, pairing, voice notes, and push notifications. This Privacy Policy explains what information the app collects, how it is used, and the choices you have. By installing or using SoFarYetSoClose you agree to the practices described below.</p>
       <h2>Information We Collect</h2>
       <h3>Location Data</h3>
       <ul>
@@ -35,8 +38,10 @@
       </ul>
       <h3>Account Information</h3>
       <ul>
-      <li>If you create or sign in to an account, we collect Firebase user ID, email or authentication provider details, display/profile details you provide, partner ID, invite code, FCM token, and pairing status.</li>
-      <li>Nudge content (text nudges, emojis, and voice notes you record in the app), offline queue data, and app preferences may be associated with your account.</li>
+      <li>Signing in with Google is the only way into the app. There is nothing to fill in, and the app asks for no profile details of its own. Google supplies your email address and account identity to Firebase Authentication.</li>
+      <li>Your account record in Firebase holds your Firebase user ID, partner ID, invite code, pairing time, and FCM push token.</li>
+      <li>It also holds <strong>your sleep window — the start and end times you set, and whether it is switched on — and your time zone offset from UTC in minutes.</strong> Both exist for one feature: holding your partner's nudge until you are awake. The offset narrows down roughly where in the world you are, to the width of a time zone. Neither is used for anything else, shared with anyone else, or used to locate you more precisely.</li>
+      <li>Nudge content (text nudges, emojis, and voice notes you record in the app), offline queue data, and app preferences may be associated with your account. A phrase you write yourself in the app is stored on your device and travels to Firebase as the text of any nudge you send with it.</li>
       </ul>
       <h3>Device Information</h3>
       <ul>
@@ -66,15 +71,18 @@
       </ul>
       <h3>Data Retention</h3>
       <ul>
-      <li>Account and paired content are retained while your account is active unless you delete content or request deletion.</li>
+      <li>Account and paired content are retained while your account is active. <strong>The app has no button to delete a single nudge or voice note</strong>, so deleting your account is the only way to remove your history through the app.</li>
+      <li><strong>Voice notes have one retention control you set yourself</strong>, under Settings: never, after 7 days, after 30 days, or once your partner has listened. <strong>The default is never.</strong> If you choose one of the others, a background job removes those audio files from Firebase Storage on that schedule.</li>
       <li>Local offline data remains until synced, deleted, app data is cleared, or the app is uninstalled.</li>
+      <li>Firebase Analytics data is aggregated and kept 14 months; Firebase Crashlytics reports are kept 90 days. Both are Firebase defaults.</li>
       </ul>
       <h3>Data Security</h3>
       <ul>
-      <li>Data is protected using platform security controls available on Android, the browser, Firebase, Google, GitHub, or other services named in this policy.</li>
-      <li>Local data remains on your device or browser unless a feature you use requires a named third-party service.</li>
-      <li>Network communication uses HTTPS/TLS where applicable.</li>
-      <li>You should protect your device, browser profile, and Google/GitHub accounts with strong authentication.</li>
+      <li>On your device, your settings and your offline nudge queue sit in the app's private storage, protected by Android's application sandbox. The app does not add encryption of its own on top of that.</li>
+      <li>In transit, every Google service named in this policy is reached over HTTPS/TLS.</li>
+      <li>In Firebase, your data is encrypted at rest by Google, and Google's handling of what it receives is governed by Google's terms rather than ours.</li>
+      <li>No Sudarshan Tech Labs server exists, so there is no third place holding your data: it is on your device, and it is in Google's Firebase.</li>
+      <li>You should protect your device and your Google account with strong authentication, since your Google account is how you sign in.</li>
       </ul>
       <h2>Data Sharing</h2>
       <h3>Family Groups</h3>
@@ -88,9 +96,12 @@
       <li>Firebase/Google provides authentication, database, storage, cloud functions, and messaging services.</li>
       <li><strong>Firebase Crashlytics (Google)</strong>: If the app crashes, a crash report is sent to Firebase Crashlytics. It can include the error details, device model, Android version, app version, and an installation identifier. No nudge text or relationship content is included. We use it only to find and fix bugs.</li>
       <li><strong>Firebase Analytics (Google)</strong>: Aggregated usage events (which screens are opened and which features are used) together with device model, Android version, and app version. No nudge or message content is sent. We use it only to see which features are worth keeping.</li>
-      <li>Google&#39;s handling of both is covered by the <a href="https://firebase.google.com/support/privacy">Firebase Privacy Policy</a>.</li>
+      <li>Google's handling of both is covered by the <a href="https://firebase.google.com/support/privacy">Firebase Privacy Policy</a>.</li>
       <li>Nudges and shared content are visible to your paired partner according to the app feature you use.</li>
+      <li><strong>The text of a nudge travels in the push notification that tells your partner about it.</strong> That means it passes through Firebase Cloud Messaging and can appear on your partner's lock screen.</li>
+      <li>Two Firebase Cloud Functions run on Google's infrastructure when you send a nudge. They read the nudge to build that notification, check your partner's sleep window, and hold the notification until your partner is awake if needed. Their diagnostic logs record the nudge's ID, the two account IDs and the sleep window — not the nudge text, and not the audio.</li>
       <li>If you tap Share on a nudge or Share the app, the app sends plain text only (the nudge text or an app store link) to the Android share sheet, and the app you pick receives that text. The app does not share images, videos, or audio files this way.</li>
+      <li>Copying a nudge or a phrase puts that text on your device's clipboard, where any app you paste into receives it.</li>
       <li>No relationship content is sold to advertisers or data brokers.</li>
       </ul>
       <p>We do <strong>not</strong> share your data with:</p>
@@ -104,9 +115,21 @@
       <ul>
       <li><strong>INTERNET</strong>: Required for Firebase sync, voice notes, and messaging.</li>
       <li><strong>RECORD_AUDIO</strong>: Used only to record voice notes you choose to send.</li>
-      <li><strong>POST<em>NOTIFICATIONS, VIBRATE, FOREGROUND</em>SERVICE, FOREGROUND<em>SERVICE</em>REMOTE_MESSAGING</strong>: Used for push notifications and background messaging.</li>
-      <li><strong>SYSTEM<em>ALERT</em>WINDOW</strong>: Used only for full-screen/overlay notification experiences when enabled.</li>
+      <li><strong>POST_NOTIFICATIONS, VIBRATE, FOREGROUND_SERVICE, FOREGROUND_SERVICE_REMOTE_MESSAGING</strong>: Used for push notifications and background messaging.</li>
+      <li><strong>SYSTEM_ALERT_WINDOW</strong>: Used only for full-screen/overlay notification experiences when enabled. You grant it separately in Android settings, and the app works without it.</li>
       </ul>
+      <h3>Permissions added by Android libraries</h3>
+      <p>The app declares the seven above. The finished build carries ten more, declared by the libraries it is built on rather than by the app's own code. They appear in the permission list you see on the Play Store, so they are listed here for completeness:</p>
+      <ul>
+      <li><strong>ACCESS_ADSERVICES_AD_ID, ACCESS_ADSERVICES_ATTRIBUTION</strong> and <strong>com.google.android.gms.permission.AD_ID</strong>: Android's Privacy Sandbox advertising APIs, declared by the Firebase Analytics library. <strong>SoFarYetSoClose shows no advertising and contains no advertising SDK.</strong> Those names appearing in a couples app's permission list would reasonably alarm anyone reading it, so to be explicit: they arrive with Analytics and are not used to show you ads.</li>
+      <li><strong>ACCESS_NETWORK_STATE</strong>: Declared by Firebase. Lets a library check whether a network exists before attempting to send; it grants no ability to use one.</li>
+      <li><strong>WAKE_LOCK</strong> and <strong>RECEIVE_BOOT_COMPLETED</strong>: Declared by Firebase Cloud Messaging and WorkManager. They are how Android delivers a push while the phone is idle, and re-registers scheduled work after a restart.</li>
+      <li><strong>com.google.android.c2dm.permission.RECEIVE</strong>: Declared by Firebase Cloud Messaging. It is what lets Google's push service hand a message to this app — the mechanism behind the notification when your partner sends you something.</li>
+      <li><strong>com.google.android.providers.gsf.permission.READ_GSERVICES</strong>: Declared by a Google Play services library, for reading the device's Google services configuration.</li>
+      <li><strong>com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE</strong>: Declared by Firebase Analytics. It lets the app ask the Play Store how it came to be installed.</li>
+      <li><strong>com.sudarshantechlabs.sofaryetsoclose.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</strong>: Generated by AndroidX for this app alone. It exists so that a receiver the app registers at runtime cannot be triggered by any other app on the device. It grants access to nothing outside this app.</li>
+      </ul>
+      <p>Verified against the merged manifest of the release build rather than the app's own manifest file: it requests seventeen permissions in total, the seven above plus these ten.</p>
       <h3>Optional Permissions</h3>
       <ul>
       <li>Audio recording, overlay notification experiences, and notifications are controlled by you through app or Android settings.</li>
@@ -118,12 +141,13 @@
       </ul>
       <h3>Account Management</h3>
       <ul>
-      <li>You can sign out, manage partner pairing, delete content where supported, or request account deletion.</li>
-      <li>Your paired partner may retain content they have received unless deletion is supported and completed for both sides.</li>
+      <li>You can sign out, unpair from your partner, choose a voice-note auto-delete setting, or delete your account.</li>
+      <li>Unpairing clears the pairing on both sides. <strong>It does not delete the nudges either of you already received.</strong></li>
+      <li><strong>There is no per-nudge delete in the app.</strong> Deleting your account is the only way to remove your nudges and voice notes through the app; for anything narrower, email us.</li>
       </ul>
       <h3>Data Access</h3>
       <ul>
-      <li>You can view account, pairing, and nudge data in the app and request access or deletion by email.</li>
+      <li>You can view your account, pairing, and nudge data in the app, and request access or deletion by email.</li>
       </ul>
       <h3>GDPR Rights (EU Users)</h3>
       <p>If you are in the European Union, you have additional rights:</p>
@@ -139,100 +163,89 @@
       <h3>Permissions</h3>
       <ul>
       <li>You can revoke Android permissions in Android Settings -&gt; Apps -&gt; SoFarYetSoClose -&gt; Permissions.</li>
-      <li>Browser permissions and storage can be managed in your browser site settings for web apps.</li>
+      <li>The overlay permission is granted and revoked separately, in Android Settings -&gt; Apps -&gt; SoFarYetSoClose -&gt; Display over other apps.</li>
       <li>Revoking required permissions may prevent related features from functioning.</li>
       </ul>
-      <h2>Children&#39;s Privacy</h2>
+      <h2>Children's Privacy</h2>
       <ul>
       <li>Our app is <strong>not intended for children under 13</strong>.</li>
       <li>We do not knowingly collect data from children under 13.</li>
       <li>If you are a parent or guardian and believe your child has provided personal information, please contact us to request deletion.</li>
-      <li>Parents and guardians should supervise children&#39;s use of apps that store personal content.</li>
+      <li>Parents and guardians should supervise children's use of apps that store personal content.</li>
       </ul>
       <h2>Security</h2>
       <ul>
-      <li>Local data is protected by Android, browser, or operating-system app sandboxing.</li>
+      <li>Local data is protected by Android's application sandbox. SoFarYetSoClose is an Android app only; there is no web or browser version of it.</li>
       <li>Network communication uses HTTPS/TLS where applicable.</li>
       <li>Third-party services named in this policy provide their own security controls and privacy policies.</li>
-      <li>You are responsible for protecting your device, browser profile, and account credentials.</li>
+      <li>You are responsible for protecting your device and your Google account credentials.</li>
       <li>We do not sell your personal data.</li>
       </ul>
       <h2>Changes to This Policy</h2>
       <p>We may update this Privacy Policy to reflect new features, legal requirements, or changes in our practices. Significant changes will be:</p>
       <ul>
       <li>Noted in the app release notes or repository when applicable</li>
-      <li>Reflected with a new &quot;Last updated&quot; date</li>
+      <li>Reflected with a new "Last updated" date</li>
       <li>Communicated in the app or project page if the change is significant</li>
       </ul>
-      <p>The &quot;Last updated&quot; date at the top of this policy indicates when revisions occurred. Continued use of the app after changes constitutes acceptance of the updated policy.</p>
+      <p>The "Last updated" date at the top of this policy indicates when revisions occurred. Continued use of the app after changes constitutes acceptance of the updated policy.</p>
       <h2>Contact Us</h2>
       <p>If you have questions about this Privacy Policy, wish to request data deletion, or have privacy concerns:</p>
       <ul>
-      <li><strong>GitHub Repository:</strong> https://github.com/SUDARSHANCHAUDHARI/sofaryetsoclose-privacy-policy</li>
+      <li><strong>GitHub Repository:</strong> <a href="https://github.com/SUDARSHANCHAUDHARI/sofaryetsoclose-privacy-policy">https://github.com/SUDARSHANCHAUDHARI/sofaryetsoclose-privacy-policy</a></li>
       <li><strong>Email:</strong> sunny.sudarshan@gmail.com</li>
-      <li><strong>Main App Repository:</strong> https://github.com/SUDARSHANCHAUDHARI/SoFarYetSoClose</li>
+      <li><strong>Main App Repository:</strong> <a href="https://github.com/SUDARSHANCHAUDHARI/SoFarYetSoClose">https://github.com/SUDARSHANCHAUDHARI/SoFarYetSoClose</a></li>
       </ul>
       <p>We will respond as quickly as possible, typically within 48 hours.</p>
       <h2>Data Deletion</h2>
-      <h3>How to Delete Your Account</h3>
+      <h3>How to Delete Your Account:</h3>
       <p>You have <strong>multiple options</strong> to delete your account and associated data:</p>
       <h4>Option 1: In-App Deletion</h4>
-      <ol>
-      <li>Open SoFarYetSoClose app</li>
-      <li>Go to account/profile/settings</li>
-      <li>Select the delete account option if available</li>
-      <li>Confirm deletion</li>
-      <li>Your account and associated data will be deleted or queued for deletion</li>
-      </ol>
+      <p>1. Open SoFarYetSoClose 2. Go to <strong>Settings</strong>, then <strong>Account</strong> 3. Tap <strong>Delete Account</strong> 4. Confirm</p>
+      <p>This removes your account record in Firebase — the pairing, the invite code, the sleep window, the time zone offset and the push token — every nudge you sent or received, and every voice note you uploaded. Your partner is unpaired and can pair with someone else afterwards.</p>
+      <p><strong>One thing it does not yet remove: the sign-in record itself</strong>, which is the entry in Firebase Authentication holding your email address. Deleting your account from inside the app signs you out and leaves that record in place. An app update that removes it in the same step is in progress; until it ships, email us as in Option 2 and we will delete it. We would rather say this plainly than let you believe it is already gone.</p>
       <h4>Option 2: Email Deletion Request</h4>
       <p>Send an email to: <strong>sunny.sudarshan@gmail.com</strong></p>
       <ul>
-      <li>Subject: &quot;Data Deletion Request - SoFarYetSoClose&quot;</li>
+      <li>Subject: "Data Deletion Request - SoFarYetSoClose"</li>
       <li>Include: The email/account identifier used in the app, if any</li>
       <li>We will process deletion requests as quickly as possible, typically within 48 hours for acknowledgement</li>
       </ul>
-      <h4>Option 3: Web Deletion</h4>
-      <ol>
-      <li>Visit the privacy policy website if a deletion form is available</li>
-      <li>Enter your registered email address</li>
-      <li>Submit and confirm the deletion request</li>
-      </ol>
-      <h3>What Gets Deleted</h3>
+      <h4>Option 3: Clearing the App's Local Data</h4>
+      <p>1. Android Settings &gt; Apps &gt; SoFarYetSoClose &gt; Storage &gt; Clear Data, or uninstall the app 2. This removes the app's local copy — settings and the offline queue — from your device only. It does not delete anything from Firebase, so use Option 1 or Option 2 for that.</p>
+      <p>There is no deletion form on this page. This page is a static document with no scripts and no forms; email is how a request reaches us.</p>
+      <h3>What Gets Deleted:</h3>
       <ul>
-      <li>Account/profile data</li>
-      <li>App content associated with your account</li>
-      <li>Pairing/group/sync data where applicable</li>
-      <li>Local cached data after sign-out, deletion, app-data clear, or uninstall</li>
+      <li>Your account record in Firebase, including the pairing, the invite code, the sleep window, the time zone offset and the push token</li>
+      <li>Every nudge you sent or received</li>
+      <li>Every voice note you uploaded to Firebase Storage</li>
+      <li>The app's local settings and offline queue, when you clear app data or uninstall</li>
+      <li>The sign-in record holding your email address — today by email request, see Option 1</li>
       </ul>
-      <h3>Data Retention After Deletion</h3>
+      <h3>Data Retention After Deletion:</h3>
       <ul>
       <li><strong>Immediate:</strong> account access may stop or deletion may be queued depending on the service</li>
       <li><strong>Up to 30 days:</strong> cloud data may be removed from active systems unless a shorter period is legally required</li>
       <li><strong>Backups/logs:</strong> limited backup or security logs may remain for a short period under provider policies</li>
       </ul>
       <p>To request deletion of your data:</p>
-      <ol>
-      <li>Open SoFarYetSoClose, if installed</li>
-      <li>Delete local content or clear app/site data where applicable</li>
-      <li>Contact support via email: sunny.sudarshan@gmail.com</li>
-      <li>Request account/data deletion and include enough detail for us to identify the app and any account, if one exists</li>
-      <li>We will confirm what data can be deleted and complete the request according to the retention terms above</li>
-      </ol>
+      <p>1. Open SoFarYetSoClose, if installed 2. Delete local content or clear app/site data where applicable 3. Contact support via email: sunny.sudarshan@gmail.com 4. Request account/data deletion and include enough detail for us to identify the app and any account, if one exists 5. We will confirm what data can be deleted and complete the request according to the retention terms above</p>
       <h2>Firebase and Google Services</h2>
-      <p>This app may use the following services depending on the features you enable and the installed version:</p>
+      <p>The app uses all of the following:</p>
       <ul>
-      <li>Firebase Authentication</li>
+      <li>Firebase Authentication, through Google Sign-In</li>
       <li>Firebase Firestore</li>
       <li>Firebase Storage</li>
       <li>Firebase Cloud Messaging</li>
       <li>Firebase Cloud Functions</li>
+      <li>Firebase Analytics</li>
+      <li>Firebase Crashlytics</li>
       </ul>
       <p>Please review relevant third-party privacy policies:</p>
       <ul>
       <li><a href="https://policies.google.com/privacy">Google Privacy Policy</a></li>
       <li><a href="https://firebase.google.com/support/privacy">Firebase Privacy Policy</a></li>
       <li><a href="https://play.google.com/about/play-terms/">Google Play Terms</a></li>
-      <li><a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement">GitHub Privacy Statement</a></li>
       </ul>
       <h2>About SoFarYetSoClose</h2>
       <p>SoFarYetSoClose is built with privacy in mind. The app is built with:</p>
@@ -244,11 +257,27 @@
       </ul>
       <p>The app collects only the data needed for the features described in this policy, and local-first features keep data on your device whenever possible.</p>
       <hr>
-      <p><strong>Last Updated:</strong> October 19, 2026</p>
+      <p><strong>Last Updated:</strong> November 9, 2026</p>
       <hr>
+      <h2>Recent Updates (Version 1.4.0 - November 9, 2026)</h2>
+      <ul>
+      <li><strong>Disclosed the sleep window and the time zone offset.</strong> Both are stored in Firebase and read by a Cloud Function so a nudge can be held until your partner is awake. Neither had ever been mentioned, and the time zone offset narrows your location to the width of a time zone, so it is now named rather than left in a field list.</li>
+      <li><strong>Said that the text of a nudge travels in the push notification</strong>, so it passes through Firebase Cloud Messaging and can appear on a lock screen, and described what the two Cloud Functions read and log.</li>
+      <li><strong>Disclosed the voice-note auto-delete setting</strong> — never, 7 days, 30 days, or after your partner listens — and that it defaults to never.</li>
+      <li><strong>Corrected the deletion section.</strong> Deleting your account from inside the app does not yet remove the sign-in record holding your email address; it signs you out and leaves that record. The policy now says so and tells you to email us until the app update lands. Also removed "Option 3: Web Deletion", which described a deletion form that has never existed on this page.</li>
+      <li><strong>Said there is no per-nudge delete in the app</strong>, in place of "delete content where supported". A reader could have believed a single voice note could be withdrawn.</li>
+      <li><strong>Listed the permissions Android libraries merge in.</strong> The app declares seven and the finished build requests seventeen. The Privacy Sandbox entries arrive with Firebase Analytics, and the entry states plainly that the app shows no advertising and has no advertising SDK. An earlier draft counted only the twelve in the <code>android.permission</code> namespace plus <code>com.google.android.gms.permission.AD_ID</code>; the four others — the Cloud Messaging receive permission, two Google Play services entries and one AndroidX generates for this app alone — are requested too and are now listed.</li>
+      <li><strong>Replaced the boilerplate security sentence</strong> claiming protection by controls available on "Android, the browser, Firebase, Google, GitHub, or other services". There is no browser version of this app and no GitHub service in it. The section now says where data actually sits. The browser and GitHub references elsewhere in the document went with it.</li>
+      <li><strong>Said the app asks for no profile details</strong>, in place of "display/profile details you provide". Google Sign-In is the only route in and the app writes no profile of its own.</li>
+      <li><strong>Added Firebase Analytics and Crashlytics to the services list</strong>, which named only five of the seven Firebase products in use.</li>
+      </ul>
+      <h2>Recent Updates (Version 1.3.0 - November 2, 2026)</h2>
+      <ul>
+      <li><strong>Named Firebase Crashlytics and Firebase Analytics</strong> and set out what each receives. This entry is recorded late: the change shipped under version 1.3.0 without a changelog note.</li>
+      </ul>
       <h2>Recent Updates (Version 1.2.0 - October 19, 2026)</h2>
       <ul>
-      <li><strong>Replaced general &quot;media&quot; wording with voice notes, the only media the app records or uploads, and described the plain-text Share option.</strong></li>
+      <li><strong>Replaced general "media" wording with voice notes, the only media the app records or uploads, and described the plain-text Share option.</strong></li>
       <li><strong>Listed a single contact email.</strong></li>
       </ul>
       <h2>Recent Updates (Version 1.1.0 - May 17, 2026)</h2>
@@ -256,7 +285,6 @@
       <li><strong>Aligned policy with the shared privacy-policy structure.</strong></li>
       <li><strong>Clarified Firebase account/pairing data, partner sharing, media/audio features, offline queue, and notifications.</strong></li>
       </ul>
-
     </article>
   </main>
 </body>
